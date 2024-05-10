@@ -1,0 +1,97 @@
+Collection Framework:- To overcome limitations of Array.
+------------------------
+Array Limitations:-
+--------------------
+	int a[] = new int[5];
+1) SIZE
+2) Type SAFE
+------------------------------------------------------------------------------------------
+		Hierarchy of Collection---"java.util.*"
+		-----------------------
+
+			Object(CLASS)
+			  |
+			Iterable(I)--------------------------------------------------------------Data--[KEY,VALUE]
+			  |									|
+			Collection(I)								|
+			  |									|
+			  |Data---Values							|
+			  |									|
+  --------------------------------------------------						|
+  |			  |			   |						|
+List(I)			Set(I)			Queue(I)				      Map(I)--[K,V]
+  |			  |			   |						|
+AbstractList(AC)     AbstractSet(AC)		AbstractQueue(AC)			   AbstractMap(AC)
+  |			  |			   |						|
+-ArrayList(C)	    --HashSet(C)	     --PriorityQueue(C)				 --HashMap(C)--[K,V]
+-Vector(C)	    --LinkedHashSet(C)							 --LinkedHashMap(C)
+-LinkedList(C)	    --TreeSet(C)							 --TreeMap(C) 
+	
+
+	
+List(I)	:-
+------------
+1) allow to store duplicate values
+2) maintain insertion order
+
+
+ArrayList:-
+-----------
+1) Non-Synchronized
+2) cann access data randomly 
+
+
+
+
+
+Sorting Techniques:-
+---------------------
+
+	Primitive + String					User Defined Objects
+----------------------------------------			-------------------------
+
+list---10 int values
+
+Collections.sort(list);
+
+
+
+	     (I)	(class)	
+	Collection vs Collections
+
+
+
+
+
+User Defined Objects:-
+-------------------------
+
+Student--[rno name std]----[500 student objects]--sorting
+
+
+
+1) Comparable---compareTo(Object obj)---sorting defination
+
+2) comparator
+
+
+	name		std		rno		marks
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
