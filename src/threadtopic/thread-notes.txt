@@ -1,0 +1,129 @@
+MultiThreadding:- Par.. Execution---100% CPU(Hardware) Utilise
+-----------------
+
+Process----Multiple Sub-process execute--Process task complete
+
+Thread ---[sub-process]----Light weight
+
+Thread--[t1,t2,t3,t4,t5]
+
+	----- -----    -----   -----  -----	
+	t1	t2	t3	t4     t5
+Royal:-
+--------
+		 7-8		 7-8
+		  |		  |
+		-------		-------
+		class-1		class-2
+		 JAVA		 Python
+------------------------------------------------------------------------------------------
+
+		  Two way to create Thread in Java
+		  ---------------------------------
+1) By extedning 'Thread' class	
+********************************
+
+Thread ---> [Job Defined]
+
+
+Runnable(I)---(public abstract void run();)
+   |
+Thread(C)---(public void run() { ... })
+   |
+MyThread1(C)---Thread
+   |
+	// [Job Defined]--Overridde
+	public void run() 
+	{
+		 ... 
+	}
+
+
+public class MyThread1 extends Thread
+{
+	public void run() 
+	{
+		// defined job into run method 
+	}
+	public static void main(String args[])
+	{
+		MyThread1 th1 = new MyThread1();
+
+		th1.start(); 
+	}
+}
+
+
+
+
+2) By implementing 'Runnable' interface
+***************************************
+
+public class MyThread1 implements Runnable 
+{
+	public void run() 
+	{
+		// defined job into run method 
+	}
+	public static void main(String args[])
+	{
+		MyThread1 resource = new MyThread1();
+
+		Thread t1 = new Threadd(resource);
+
+
+		t1.start(); 
+	}
+}
+
+Thread Life-cycle:-
+--------------------
+
+1) START
+    |
+    |
+2) Runnable(Queue)<----------------------4) NonRunnable Stat(Sleep Mode) 
+    | 						|
+    |(pick)--Operating System Schedule		|
+    |						|
+3) Running(OS)-------sleep(),wait()---------------
+    |
+    |
+5) Terminate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

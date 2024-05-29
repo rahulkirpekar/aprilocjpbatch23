@@ -1,0 +1,43 @@
+JDBC - Java to Database Connectivity
+---------------------------------------
+
+Data---records---store---->Database
+
+			 connection	
+	Java Programm----------------->Database(MySQL)
+1) Database connection:-
+-------------------------
+			 java ORG
+			JDBC API
+			----------
+			   | 
+	------------------------------------------
+			connection	
+	------------------------------------------
+     
+	 |		  |		  |
+      Driver.class     Driver.class    Driver.class	
+	 |		  |		  |
+ mysql-connector.jar   odbc.jar	         *.jar		
+	 |		  |		  |
+	MySql		Oracle		Postgress
+	 |		  |		  |
+
+
+	// 1) Make credentials
+
+URLNAME="jdbc:mysql://localhost:3306/aprilbatch";
+DRIVERCLASS="com.mysql.cj.jdbc.Driver";
+
+USERNAME="root";
+PASSWORD="root";
+
+
+
+
+
+
+
+
+
+2) SQL Queries------->Database
