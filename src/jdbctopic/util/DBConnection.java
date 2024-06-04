@@ -13,14 +13,25 @@ public class DBConnection
 //	private static final String USERNAME     = "root";
 //	private static final String PASSWORD	 = "root";
 	
+	private static Connection conn = null;
+	
+	private DBConnection()
+	{
+	}
+	public static Connection getDbInstance() 
+	{
+		if(conn == null) 
+		{
+			conn = DBConnection.getDBConnection();  
+		}
+		return conn;
+	}
 	// 2) create getDBConnection method
-	public static void getDBConnection() 
+	private static Connection getDBConnection() 
 	{
 		Properties prop =  new Properties();
-
 		try 
 		{
-			
 			FileInputStream fin = new FileInputStream("C:\\Users\\Royal\\eclipse-workspace\\aprilocjpbatch23\\dbconfig.properties");
 
 			prop.load(fin);
@@ -29,14 +40,12 @@ public class DBConnection
 		{
 			e.printStackTrace();
 		}
-		
-		
 		String urlName    = prop.getProperty("URLNAME").trim();
 		String driverClass= prop.getProperty("DRIVERCLASS").trim();
 		String userName    = prop.getProperty("USERNAME").trim();
 		String password    = prop.getProperty("PASSWORD").trim();
 		
-		Connection conn = null;
+		
 		try 
 		{
 			// 3) Load Driver class
@@ -48,7 +57,7 @@ public class DBConnection
 			// 5) validate connection object
 			if(conn != null) 
 			{
-				System.out.println("Db connected : " + conn);
+//				System.out.println("Db connected : " + conn);
 			}else 
 			{
 				System.out.println("Db not connected : " + conn);
@@ -57,10 +66,7 @@ public class DBConnection
 		{
 			e.printStackTrace();
 		}
-		
+		return conn;
 	}
-	public static void main(String[] args) 
-	{
-		DBConnection.getDBConnection();
-	}
+	
 }
