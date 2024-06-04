@@ -41,3 +41,31 @@ PASSWORD="root";
 
 
 2) SQL Queries------->Database
+
+
+
+Database Connection:-
+--------------------
+
+	SQL Query--execute
+	-----------------
+		|--conn object
+	-----------------
+	connection object-----MYSQL
+
+SingleTon Design Pattern:-
+-----------------------------
+1) getDBConnection() ---private
+2) make private constrictor ---private DBConnection()
+3) make public static void getDbInstance()
+4) make private static Connection conn = null;
+5) 
+
+
+Student()---constructor----private
+
+	Student s1= new Student();
+	Student s2= new Student();
+	Student s3= new Student();
+	Student s4= new Student();
+	Student s5= new Student();
