@@ -69,3 +69,90 @@ Student()---constructor----private
 	Student s3= new Student();
 	Student s4= new Student();
 	Student s5= new Student();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+DB
+conn object
+    |
+----------
+Statement:-
+----------
+		SQL Query ----execute----MYSQL Database
+
+
+	1) Statement(I)	   2) PreparedStatement(I)	3) CallableStatement
+	-----------------  ------------------------	------------------------
+SQL Query - Java Program--execute			procedures,triggers,function		
+
+
+
+
+int executeUpdate()	ResultSet executeQuery()	
+	  |			  |
+	insert			select	
+	update
+	delete
+
+	      START
+		|
+	1) Statement(I)	   
+		|
+	2) PreparedStatement(I)----Optimized
+
+
+
+
+
+
+CREATE TABLE Student
+(
+	rno int PRIMARY KEY AUTO_INCREMENT,
+	name varchar(50),
+	std int,
+	marks int
+);
+
+
+
+Dao - Data Access Object
+
+
+	StudentDao---student
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
